@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Bookmarker</title>
+     <link rel="stylesheet" href="bootstrap-5.3.3/css/bootstrap.min.css">
+     <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+
+<body class="bg-dark text-light">
+     <h1 class="text-center text-capitalize my-3 p-2">Bookmarker</h1>
+     <div id="product-form" class="main w-50 text-capitalize  mx-auto p-3">
+          <div class="form-wrapper">
+               <h3 class="h4 text-center text-capitalize my-3 p-2">Bookmark your favorite websites</h3>
+               <form>
+                    <div class="mb-3">
+                         <label for="siteName" class="form-label"><i class="fa-solid fa-bookmark"></i> websitesite
+                              name</label>
+                         <input oninput="validateName(this)" type="text" class="form-control" id="siteName"
+                              placeholder="My website">
+                         <div class="valid-feedback">
+                              Looks good!
+                         </div>
+                         <div class="invalid-feedback">
+                              Please enter a minimum of 3 characters & maximum of 64 characters with no special
+                              characters.
+                         </div>
+                    </div>
+                    <div class="mb-3">
+                         <label for="siteUrl" class="form-label"> <i class="fa-solid fa-link"></i> websitesite
+                              URL</label>
+                         <input oninput="validateName(this)" type="text" class="form-control" id="siteUrl"
+                              placeholder="www.example.com">
+                         <div class="valid-feedback">
+                              Looks good!
+                         </div>
+                         <div class="invalid-feedback">
+                              Please enter a valid website address.
+                         </div>
+                    </div>
+                    <div class="submit-btn-wrapper text-center">
+                         <button id="addButton" onclick="addBookmark()" type="button" class="btn btn-primary w-50 "> <i
+                                   class="fa-solid fa-plus"></i> Add Bookmark</button>
+                    </div>
+               </form>
+          </div>
+          <div class="table-wrapper">
+               <table class="table table-dark table-striped">
+                    <thead>
+                         <tr>
+                              <th scope="col">Index</th>
+                              <th scope="col">Website Name</th>
+                              <th scope="col">Visit</th>
+                              <th scope="col">Delete</th>
+                         </tr>
+                    </thead>
+                    <tbody id="bookmarkTable">
+                         <!-- <tr class="text-capitalize">
+                              <th scope="row">1</th>
+                              <td>dark</td>
+                              <td><a href="#"><button type="button" class="btn btn-warning">Visit</button></a></td>
+                              <td><button onclick="" type="button" class="btn btn-danger">Delete</button></td>
+                         </tr> -->
+                    </tbody>
+               </table>
+          </div>
+     </div>
+     <script src="bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+     <script src="index.js"></script>
+</body>
+
+
+</html>
